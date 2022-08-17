@@ -1,9 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Bookstore
-
-> A simple Bookstore React Application using redux reducers and actions.
-
+> A simple Bookstore React Application using redux in components to implement add and remove functionality.
 
 ## Built With
 

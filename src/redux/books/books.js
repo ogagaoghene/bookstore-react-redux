@@ -1,34 +1,41 @@
 const ADDBOOK = 'bookStore/books/ADD_BOOK';
 const REMOVEBOOK = 'bookStore/books/REMOVE_BOOK';
 
-const beginState = [
-  {
-    id: 1, title: 'Taming the sate in React', author: 'Robin Weiruch', genre: 'Technology book',
-  },
-];
+const newBook = (action) => {
+  const { title, author, genre } = action;
+  return {
+    title,
+    author,
+    genre,
+  };
+};
 
-export const addBook = (payload) => ({
-  type: 'ADDBOOK',
-  payload,
-});
+const removeBook = (state = [], action) => {
+  const books = state.filter((book) => book.title !== action.title);
+  return books;
+};
 
-export const removeBook = (payload) => ({
-  type: 'REMOVEBOOK',
-  payload,
-});
-
-const reducer = (state = beginState, action) => {
+export default function reducer(state = [], action) {
+  let books = [];
   switch (action.type) {
     case ADDBOOK:
-      if (Array.isArray(action.payload)) {
-        return [...action.payload];
-      }
-      return [...state, action.payload];
+      books = [...state, newBook(action)];
+      return books;
     case REMOVEBOOK:
-      return state.filter((book) => book.id !== action.payload);
+      books = removeBook(state, action);
+      return books;
     default:
       return state;
   }
-};
+}
 
-export default reducer;
+export const addBook = ({ title, author }) => ({
+  type: ADDBOOK,
+  title,
+  author,
+});
+
+export const deleteBook = ({ title }) => ({
+  type: REMOVEBOOK,
+  title,
+});
