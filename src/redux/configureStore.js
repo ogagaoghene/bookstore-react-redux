@@ -5,8 +5,8 @@ import statusReducer from './categories/categories';
 const initialState = {
   books: [{
     id: 1,
-    title: 'Pride and Prejudice',
-    author: 'Fyodor Dostoesvky',
+    title: 'React 16 Essentials',
+    author: 'Artemij Fedosejev, Adam Boduch',
   }],
 };
 
