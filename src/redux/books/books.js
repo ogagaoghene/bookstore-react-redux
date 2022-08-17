@@ -4,7 +4,7 @@ const REMOVEBOOK = 'bookStore/books/REMOVE_BOOK';
 const beginState = [
   {
     id: 1, title: 'Taming the sate in React', author: 'Robin Weiruch', genre: 'Technology book',
-  }
+  },
 ];
 
 export const addBook = (payload) => ({
