@@ -1,10 +1,9 @@
-import React from 'react';
-import BookList from './BookList';
+import List from './List';
 import Form from './Form';
 
 const Home = () => (
-  <div className="container px-4 mx-auto">
-    <BookList />
+  <div className="booklist">
+    <List />
     <Form />
   </div>
 );

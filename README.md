@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> Adding reducers and actions to a simple Bookstore application written in React using redux for adding reducers and actions.
+> This is a simple bookstore project made following instructions while a student in Microverse.
 
 
 ## Built With
@@ -16,14 +16,13 @@
 - Please clone this repository on your local pc as usual and run `npm i`;
 - Run `npm start` and feel free to code away.
 
-## Author
+## Authors
 
-👤 **Esi Ogagaoghene**
+👤 **Thiago Allan Porro Ponce**
 
-- GitHub: [@ogagaoghene](https://github.com/ogagaoghene)
-- Twitter: [@esi_ogaga](https://twitter.com/esi_ogaga)
-- LinkedIn: [ogagaoghene](https://linkedin.com/in/ogagaoghene-esi-7a478647)
-
+- GitHub: [@Thi-Ponce](https://github.com/Thi-Ponce)
+- Twitter: [@Thi_ponce](https://twitter.com/Thi_ponce)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/thiago-ponce)
 
 
 ## 🤝 Contributing
@@ -40,7 +39,7 @@ If you like this project please let me know!
 
 ## See live
 
-[Live project to be added soon](https://github.com/ogagaoghene/bookstore-redux-react.git)
+[Live project to be added soon](https://github.com/Thi-Ponce/react-mathmagician)
 
 ## 📝 License
 
