@@ -1,65 +1,47 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore CMS
-This is a Bookstore CMS project based on React and Redux to display a list of books, categorize it, add and remove books and update your reading progress. It basically stores the added books and fetch the stored list of books using remote API.  
-## Major Technologies
-- [ ] HTML5
-- [ ] CSS
-- [ ] JAVASCRIPT
-- [ ] REACT
-- [ ] REDUX
-- [ ] NPM
-### Demo
-[Live Demo](https://bookstore-cms-aliatayee.netlify.app/)
-### Install & Setup
+# Bookstore
 
-To setup and install this sample Leaderboard project, follow the below steps:
-- Clone this project by the command: 
+> Adding reducers and actions to a simple Bookstore application written in React using redux for adding reducers and actions.
 
-```
-$ git clone https://github.com/aliatayee/bookstore-cms-react-redux
-```
 
-- Then switch to the project folder by the bellow query:
+## Built With
 
-```
-$ cd bookstore-cms-react-redux
-```
+- React
+- Redux
 
-- Then run the below command to install dependencies
 
-```
-$ npm i
-```
-- Finally, run the below command to start the project.
+## Getting Started
 
-```
-$ npm start
-```
+- Please clone this repository on your local pc as usual and run `npm i`;
+- Run `npm start` and feel free to code away.
 
-## Run tests 
-To run the tests for linters locally, you must have node installed on your computer. Install the necessary packages. Run npx stylelint "*/.{css,scss}" Run npx hint . Run npx eslint .
+## Author
 
-### Prerequisites
+👤 **Esi Ogagaoghene**
 
-- IDE to edit and run the code (We use Visual Studio Code 🔥).
-- Git to versionning your work.
+- GitHub: [@ogagaoghene](https://github.com/ogagaoghene)
+- Twitter: [@esi_ogaga](https://twitter.com/esi_ogaga)
+- LinkedIn: [ogagaoghene](https://linkedin.com/in/ogagaoghene-esi-7a478647)
 
-### Authors
-👤 **Ali**
-
-- GitHub: [@aliatayee](https://github.com/aliatayee)
-- Twitter: [@aqaatayee](https://twitter.com/aqaatayee)
 
 
 ## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
-
 ## Show your support
-Give a ⭐️ if you like this project!
+
+If you like this project please let me know!
 
 ## Acknowledgments
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+
+- Thank you to all the friends that helped me along the way to create this.
+
+## See live
+
+[Live project to be added soon](https://github.com/ogagaoghene/bookstore-redux-react.git)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
