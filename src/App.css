@@ -1,0 +1,12 @@
+.active-link {
+  color: rgb(24, 24, 24);
+}
+
+html {
+  background-color: rgba(243, 243, 243, 0.507) !important;
+}
+
+.radial-progress {
+  --value: 64;
+  --size: 4rem;
+}
