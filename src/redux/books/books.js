@@ -1,41 +1,74 @@
 const ADDBOOK = 'bookStore/books/ADD_BOOK';
-const REMOVEBOOK = 'bookStore/books/REMOVE_BOOK';
+const DELETEBOOK = 'bookStore/books/DELETE_BOOK';
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
+const appID = 'fu2GxwNDMRGqiSNEy6eo';
 
-const newBook = (action) => {
-  const { title, author, genre } = action;
-  return {
-    title,
-    author,
-    genre,
-  };
+const startingState = [];
+// Create actions
+
+export const addBook = (payload) => ({
+  type: ADDBOOK,
+  payload,
+});
+
+export const removeBook = (payload) => ({
+  type: DELETEBOOK,
+  payload,
+});
+// Implement API storage management
+
+export const addAPI = (Book) => async (dispatch) => {
+  dispatch(addBook(Book));
+  await fetch(`${baseURL}/apps/${appID}/books`, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: Book.item_id,
+      title: Book.title,
+      author: Book.author,
+      category: Book.category,
+    }),
+    headers: { 'Content-type': 'application/JSON' },
+  });
 };
 
-const removeBook = (state = [], action) => {
-  const books = state.filter((book) => book.title !== action.title);
-  return books;
+export const getBook = () => async (dispatch) => {
+  await fetch(`${baseURL}/apps/${appID}/books`)
+    .then((response) => response.json())
+    .then((bookList) => {
+      const filteredBooks = Object.entries(bookList).map(([key, value]) => ({
+        item_id: key,
+        title: value[0].title,
+        author: value[0].author,
+        category: value[0].category,
+      }));
+      if (filteredBooks) {
+        dispatch(addBook(filteredBooks));
+      }
+    });
 };
 
-export default function reducer(state = [], action) {
-  let books = [];
+export const removeAPI = (id) => async (dispatch) => {
+  dispatch(removeBook(id));
+  await fetch(`${baseURL}/apps/${appID}/books/${id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ item_id: id }),
+    headers: { 'Content-type': 'application/JSON' },
+  });
+};
+// Create reducer
+
+const booksReducer = (state = startingState, action) => {
   switch (action.type) {
     case ADDBOOK:
-      books = [...state, newBook(action)];
-      return books;
-    case REMOVEBOOK:
-      books = removeBook(state, action);
-      return books;
+      if (Array.isArray(action.payload)) {
+        return [...action.payload];
+      }
+      return [...state, action.payload];
+    case DELETEBOOK:
+      return state.filter((book) => book.item_id !== action.payload);
     default:
       return state;
   }
-}
+};
 
-export const addBook = ({ title, author }) => ({
-  type: ADDBOOK,
-  title,
-  author,
-});
-
-export const deleteBook = ({ title }) => ({
-  type: REMOVEBOOK,
-  title,
-});
+export default booksReducer;

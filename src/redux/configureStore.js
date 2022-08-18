@@ -1,16 +1,10 @@
-import { combineReducers, createStore } from 'redux';
-import reducer from './books/books';
-import statusReducer from './categories/categories';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import booksReducer, { getBook } from './books/books';
+import categoriesReducer from './categories/categories';
 
-const initialState = {
-  books: [{
-    id: 1,
-    title: 'React 16 Essentials',
-    author: 'Artemij Fedosejev, Adam Boduch',
-  }],
-};
-
-const rootReducer = combineReducers({ books: reducer, categories: statusReducer });
-const store = createStore(rootReducer, initialState);
+const rootReducer = combineReducers({ booksReducer, categoriesReducer });
+const store = createStore(rootReducer, applyMiddleware(thunk));
+store.dispatch(getBook());
 
 export default store;

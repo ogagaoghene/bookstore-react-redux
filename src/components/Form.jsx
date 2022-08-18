@@ -1,43 +1,57 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addAPI } from '../redux/books/books';
 
 const Form = () => {
-  const [bookTitle, setTitle] = useState('');
-  const [bookAuthor, setAuthor] = useState('');
-
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
-  const submitForm = (event) => {
-    event.preventDefault();
-    dispatch(addBook({
-      title: bookTitle,
-      author: bookAuthor,
-    }));
+  const submitBookToStore = (e) => {
+    e.preventDefault();
+    const newBook = {
+      item_id: Date.now(),
+      title,
+      author,
+      category,
+    };
+    dispatch(addAPI(newBook));
+    setTitle('');
+    setAuthor('');
+    setCategory('');
   };
 
   return (
     <div className="form-container">
       <h2 className="form-title">ADD BOOK</h2>
-      <form onSubmit={submitForm}>
+      <form onSubmit={submitBookToStore}>
         <input
-          className="book-title"
+          className="form-book-title"
           type="text"
           required
           placeholder="Title"
-          value={bookTitle}
-          onChange={(event) => setTitle(event.target.value)}
+          value={title}
+          onChange={(event) => setTitle((event.target.value))}
         />
         <input
-          className="book-author"
+          className="form-book-author"
           type="text"
           required
           placeholder="Author"
-          value={bookAuthor}
-          onChange={(event) => setAuthor(event.target.value)}
+          value={author}
+          onChange={(event) => setAuthor((event.target.value))}
         />
-        <button className="add-button" type="submit">
-          Add
+        <input
+          className="form-book-category"
+          type="text"
+          required
+          placeholder="Category"
+          value={category}
+          onChange={(event) => setCategory((event.target.value))}
+        />
+        <button className="add-btn" type="submit">
+          ADD BOOK
         </button>
       </form>
     </div>
