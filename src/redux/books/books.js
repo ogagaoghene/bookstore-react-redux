@@ -3,7 +3,8 @@ const DELETEBOOK = 'bookStore/books/DELETE_BOOK';
 const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 const appID = 'fu2GxwNDMRGqiSNEy6eo';
 
-const initialState = [];
+const startingState = [];
+// Create actions
 
 export const addBook = (payload) => ({
   type: ADDBOOK,
@@ -14,6 +15,7 @@ export const removeBook = (payload) => ({
   type: DELETEBOOK,
   payload,
 });
+// Implement API storage management
 
 export const addAPI = (Book) => async (dispatch) => {
   dispatch(addBook(Book));
@@ -23,6 +25,7 @@ export const addAPI = (Book) => async (dispatch) => {
       item_id: Book.item_id,
       title: Book.title,
       author: Book.author,
+      category: Book.category,
     }),
     headers: { 'Content-type': 'application/JSON' },
   });
@@ -36,6 +39,7 @@ export const getBook = () => async (dispatch) => {
         item_id: key,
         title: value[0].title,
         author: value[0].author,
+        category: value[0].category,
       }));
       if (filteredBooks) {
         dispatch(addBook(filteredBooks));
@@ -51,8 +55,9 @@ export const removeAPI = (id) => async (dispatch) => {
     headers: { 'Content-type': 'application/JSON' },
   });
 };
+// Create reducer
 
-const booksReducer = (state = initialState, action) => {
+const booksReducer = (state = startingState, action) => {
   switch (action.type) {
     case ADDBOOK:
       if (Array.isArray(action.payload)) {

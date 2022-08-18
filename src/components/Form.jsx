@@ -5,6 +5,7 @@ import { addAPI } from '../redux/books/books';
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
   const submitBookToStore = (e) => {
@@ -13,10 +14,12 @@ const Form = () => {
       item_id: Date.now(),
       title,
       author,
+      category,
     };
     dispatch(addAPI(newBook));
     setTitle('');
     setAuthor('');
+    setCategory('');
   };
 
   return (
@@ -38,6 +41,14 @@ const Form = () => {
           placeholder="Author"
           value={author}
           onChange={(event) => setAuthor((event.target.value))}
+        />
+        <input
+          className="form-book-category"
+          type="text"
+          required
+          placeholder="Category"
+          value={category}
+          onChange={(event) => setCategory((event.target.value))}
         />
         <button className="add-btn" type="submit">
           ADD BOOK
