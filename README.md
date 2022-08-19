@@ -8,7 +8,6 @@
 - React
 - Redux
 
-
 ## Getting Started
 
 - Please clone this repository on your local pc as usual and run `npm i`;

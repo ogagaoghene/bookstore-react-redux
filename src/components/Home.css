@@ -11,12 +11,15 @@ body {
 }
 
 .listing {
-  width: 91%;
+  width: 78%;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px;
-  border: 1px solid  #e8e8e8;
+  border: 1px solid #e8e8e8;
+  margin-left: 70px;
+  margin-right: 20px;
 }
 
 .booklist ul {
@@ -226,11 +229,11 @@ body {
 }
 
 .form-container {
-  width: 93%;
-  margin: 1.813rem 0 1rem 2.3rem;
+  width: 80%;
   border-top: solid 1px #e8e8e8;
   background-color: #fff;
   padding: 5px;
+  margin: 0 auto;
 }
 
 .Form-content {
