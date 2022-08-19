@@ -4,7 +4,6 @@ const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 const appID = 'fu2GxwNDMRGqiSNEy6eo';
 
 const startingState = [];
-// Create actions
 
 export const addBook = (payload) => ({
   type: ADDBOOK,
@@ -15,7 +14,6 @@ export const removeBook = (payload) => ({
   type: DELETEBOOK,
   payload,
 });
-// Implement API storage management
 
 export const addAPI = (Book) => async (dispatch) => {
   dispatch(addBook(Book));
@@ -55,7 +53,6 @@ export const removeAPI = (id) => async (dispatch) => {
     headers: { 'Content-type': 'application/JSON' },
   });
 };
-// Create reducer
 
 const booksReducer = (state = startingState, action) => {
   switch (action.type) {
