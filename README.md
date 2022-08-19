@@ -1,13 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Bookstore
-> A simple Bookstore React Application that connects to an existing API to create and remove books in a remote server.
+> A simple Bookstore React Application with styling implemented
 
 ## Built With
 
 - React
 - Redux
-
 
 ## Getting Started
 

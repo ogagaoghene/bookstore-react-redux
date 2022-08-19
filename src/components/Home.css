@@ -1,3 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Slab:wght@100;300;400;700&display=swap');
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .booklist {
-  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.listing {
+  width: 78%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #e8e8e8;
+  margin-left: 70px;
+  margin-right: 20px;
+}
+
+.booklist ul {
+  flex-direction: column;
+  gap: 0.938rem;
+  padding-bottom: 2.5rem;
+}
+
+.category {
+  width: 3.063rem;
+  height: 1.125rem;
+  color: #121212;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.book-title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  width: 12.313rem;
+  height: 1.813rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  margin: 10px 0 0 0;
+}
+
+.book-author {
+  margin-bottom: 16px;
+  color: #4386bf;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.button {
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  border-left: 2px solid #e8e8e8;
+  background-color: #fff;
+  padding-left: 17px;
+  transition: 0.5s;
+}
+
+.button:nth-child(1) {
+  border: 0;
+  padding-left: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.book-data {
+  display: flex;
+}
+
+.book-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-right: 2px solid #e8e8e8;
+}
+
+.book-progress-bar {
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  transform: scale(2);
+}
+
+.inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 1.75rem;
+  width: 1.75rem;
+  margin: -0.875rem 0 0 -0.875rem;
+  background: white;
+  border-radius: 100%;
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #e8e8e8;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  clip: rect(0, 2rem, 2rem, 1rem);
+}
+
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  clip: rect(0, 1rem, 2rem, 0);
+  background: linear-gradient(to bottom, #307bbe, #379cf6);
+}
+
+.circle .left .progress {
+  z-index: 1;
+  animation: left 2s linear both;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circle .right {
+  transform: rotate(175deg);
+  z-index: 3;
+}
+
+.circle .right .progress {
+  animation: right 1s linear both;
+  animation-delay: 2s;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(95deg);
+  }
+}
+
+.progress-number {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+.book-completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  color: #837878;
+  font-weight: bold;
+}
+
+.chapters {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.current {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.chapter-progress {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.chapter-update {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  transition: 0.5s;
+}
+
+.chapter-update:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.form-container {
+  width: 80%;
+  border-top: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.Form-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.form-head {
+  margin: 1.813rem 0 1.188rem 0;
+  font-family: 'Montserrat', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.form-title,
+.form-author {
+  width: 30%;
+  height: 1.8rem;
+  margin-right: 15px;
+  padding: 0.813rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.form-title::placeholder {
+  font-family: 'Montserrat', serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.form-author::placeholder {
+  font-family: 'Montserrat', serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+select {
+  cursor: pointer;
+  width: 30%;
+  height: 3rem;
+  margin-right: 15px;
+  padding: 0.813rem 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: 'Montserrat', serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+}
+
+.add-btn {
+  min-width: 11.5rem;
+  height: 2.813rem;
+  margin-top: 15px;
+  padding: 0.801rem 1.188rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 0.2s background-color linear;
+  border: 0;
+}
+
+.add-btn:hover {
+  background-color: rgb(50, 50, 255);
 }

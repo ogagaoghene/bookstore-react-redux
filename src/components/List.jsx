@@ -6,7 +6,7 @@ const List = () => {
   return (
     <ul>
       {bookList.map((item) => (
-        <Book title={item.title} key={item.item_id} id={item.item_id} />
+        <Book title={item.title} category={item.category} author={item.author} key={item.item_id} id={item.item_id} progress={`${Math.floor(Math.random() * 100) + 1}%`} />
       ))}
     </ul>
   );

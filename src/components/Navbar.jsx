@@ -1,17 +1,20 @@
 import { Link } from 'react-router-dom';
+import { ImUser } from 'react-icons/im';
+import './Navbar.css';
 
 const Navbar = () => (
   <header className="Header">
-    <h1 className="header-title">Bookstore CMS</h1>
+    <h1 className="header-title"><span>Bookstore CMS</span></h1>
     <nav className="navbar">
-      <ul>
-        <li>
-          <Link to="/">Books</Link>
+      <ul className="nav-ul">
+        <li className="links">
+          <Link to="/">BOOKS</Link>
         </li>
-        <li>
-          <Link to="/categories">Categories</Link>
+        <li className="links">
+          <Link to="/categories">CATEGORIES</Link>
         </li>
       </ul>
+      <ImUser className="user-icon" />
     </nav>
   </header>
 );
