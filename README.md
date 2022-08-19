@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Bookstore
-> A simple Bookstore React Application with styling
+> A simple Bookstore React Application with styling implemented
 
 ## Built With
 
