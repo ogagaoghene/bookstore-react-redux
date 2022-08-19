@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Slab:wght@100;300;400;700&display=swap');
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .booklist {
-  margin: 2.313rem 2rem;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .listing {
-  width: 100%;
+  width: 91%;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 30px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid  #e8e8e8;
 }
 
 .booklist ul {
@@ -220,10 +226,11 @@
 }
 
 .form-container {
-  width: 100%;
+  width: 93%;
   margin: 1.813rem 0 1rem 2.3rem;
-  border-top: solid 1px #e8e8e8;
+  border-top: solid 1px #e8e8e8; 
   background-color: #fff;
+  padding: 5px;
 }
 
 .Form-content {
