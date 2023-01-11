@@ -1,18 +1,35 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore
-> A simple Bookstore React Application with styling implemented
+# Bookstore App 
 
-## Built With
+> A bookstore app buiit with React and Redux to allow books to be stored, and retrieved through an external API.
 
-- React
-- Redux
+## Tech Stack
 
-## Getting Started
+**Client:** React, Redux
 
-- Please clone this repository on your local pc as usual and run `npm i`;
-- Run `npm start` and feel free to code away.
+## Run Locally
+Clone the project
 
+```bash
+  git clone https://github.com/ogagaoghene/bookstore-react-redux.git
+```
+Go to the project directory
+
+```bash
+  cd bookstore-react-redux
+```
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
 ## Author
 
 👤 **Esi Ogagaoghene**
@@ -27,16 +44,22 @@ Contributions, issues, and feature requests are welcome!
 
 ## Show your support
 
-If you like this project please let me know!
+Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Thank you to all the friends that helped me along the way to create this.
+- Thanks to friends that help me to create this all the way. I sincerely appreciate your efforts.
 
-## See live
-
-[Live project to be added soon](https://github.com/ogagaoghene/bookstore-redux-react)
+## See Live
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENCE) licensed.
+
+
+
+
+
+
+
+
