@@ -9,7 +9,7 @@ const categories = [
   'Technology',
   'Western',
   'Philosophical',
-  'History'
+  'History',
 ];
 
 const Form = () => {
