@@ -6,7 +6,7 @@
 
 ## Tech Stack
 
-**Client:** React, Redux
+**Client:** JavaScript, React, Redux, Webpack
 
 ## Run Locally
 Clone the project
@@ -30,8 +30,7 @@ Start the server
 ```bash
   npm run start
 ```
-
-## See Live
+## Demo
 
 [Check this link](https://celadon-peony-752db7.netlify.app)
 
