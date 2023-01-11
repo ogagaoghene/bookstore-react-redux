@@ -30,6 +30,11 @@ Start the server
 ```bash
   npm run start
 ```
+
+## See Live
+
+[Check this link](https://celadon-peony-752db7.netlify.app)
+
 ## Author
 
 👤 **Esi Ogagaoghene**
@@ -49,8 +54,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to friends that help me to create this all the way. I sincerely appreciate your efforts.
-
-## See Live
 
 ## 📝 License
 
