@@ -2,7 +2,7 @@
 
 # Bookstore App 
 
-> A bookstore app buiit with React and Redux to allow books to be stored, and retrieved through an external API.
+> A Bookstore app that allow users to store, delete books,  and retrieve books through an external API.
 
 ## Tech Stack
 
