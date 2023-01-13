@@ -2,7 +2,7 @@
 
 # Bookstore App 
 
-> A Bookstore app that allow users to store, delete books,  and retrieve books through an external API.
+> A Bookstore app that pulls from an external books API and allow users only to add and remove books implemented with HTML5, CSS3, React and Redux
 
 ## Tech Stack
 
